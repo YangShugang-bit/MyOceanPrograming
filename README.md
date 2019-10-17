@@ -3,17 +3,13 @@ https://blog.csdn.net/Goldxwang/article/details/93893862 #to read file data
 # coding = utf-8
 # /usr/yangshugang/Anaconda3 python3.7
 
-'''
 Author:Yang Shugang
 Email :yangshugang12@stu.ouc.edu.cn or yangshugang@theidi.com
 Number:18205422083
 date  :2019-10-16 09:45
-introduction:uesd to
-des
-'''
+introduction:uesd 
 
 from numpy import *
-
 
 def loadDataSet(fileName):
     '''导入数据'''
@@ -30,20 +26,6 @@ def loadDataSet(fileName):
         labelMat.append(float(curLine[-1]))
     return dataMat, labelMat
 
-# def loadDataSet(fileName):
-#     numFeat = len(open(fileName).readline().split('\t'))    # 计算有多少列
-#     dataMat = []
-#     labelMat = []
-#     fr = open(fileName)
-#     for line in fr.readlines():        #  遍历原始数据集每一行
-#         lineArr =[]
-#         curLine = line.strip().split('\t')      # 是一列表类型
-#         for i in range(numFeat-1):     # numFeat - 1的原因：因为原始数据的最后一列是类别，不是属性数据
-#             lineArr.append(float(curLine[i]))  # 一个一个传进lineArr列表向量
-#         dataMat.append(lineArr)     # 再传进dataMat列表向量
-#         labelMat.append(float(curLine[-1]))  # 写进标签列表
-#     return dataMat, labelMat
-
 if __name__ == "__main__":
     '''线性回归'''
     datafile = u'D:/2019工作项目/201909温州洞头大小门岛/sontek/GPS_MODEL_SpringTide083113-083121/08311930/WENZH1908311930.spd'
@@ -52,19 +34,7 @@ if __name__ == "__main__":
     #xArr, yArr = loadDataSet('ex0.txt')
     print('xArr= \n', yArr)
     print('yArr= \n',  yArr)
-注意事项：
-（1）该函数块主要用于从原始数据文件（.txt,.data等）读取数据，用于机器学习算法的训练和测试应用
-（2）labelMat是一列表，表示标签/类别
-（3）dataMat也是列表类型
-（4）当原始数据文件间的数据是空格隔开，则使用.split('\t')
-                       若是逗号隔开，则使用.split(',')
-    # 从CSV文件导入数据
-    '''
-    步骤：
-    1. 打开文件
-    2.读取文件头
-    3.读取剩余行
-    4当发生错误时抛出异常
+
     '''
      
     import csv
